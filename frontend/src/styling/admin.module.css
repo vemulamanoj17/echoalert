@@ -1,0 +1,161 @@
+/* adminlogin.module.css */
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  background: linear-gradient(135deg, #1e1e2e 0%, #2c2c44 100%);
+  padding: 1.5rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.form {
+  background: #2e2e3e;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 400px;
+  transition: transform 0.3s ease;
+}
+
+.form:hover {
+  transform: translateY(-5px);
+}
+
+.formTitle {
+  color: #e0e0e0;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.inputGroup {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.input {
+  width: 85%;
+  padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+  border: 2px solid #00bcd4;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #e0e0e0;
+  background: #3a3a4a;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #0288d1;
+  box-shadow: 0 0 8px rgba(2, 136, 209, 0.3);
+}
+
+.input::placeholder {
+  color: #90a4ae;
+  opacity: 0.8;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #00bcd4;
+  font-size: 1.2rem;
+  z-index: 1;
+}
+
+.submitButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.875rem;
+  background: #00bcd4;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.125rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.submitButton:hover {
+  background: #0288d1;
+  transform: scale(1.05);
+}
+
+.submitButton:active {
+  transform: scale(0.95);
+}
+
+.submitButton:disabled {
+  background: #607d8b;
+  cursor: not-allowed;
+}
+
+.citizenLink {
+  text-align: center;
+  margin-top: 1.25rem;
+  color: #b0bec5;
+  font-size: 0.875rem;
+}
+
+.link {
+  color: #00bcd4;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #0288d1;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .loginContainer {
+    padding: 1rem;
+  }
+
+  .form {
+    padding: 1.5rem;
+    max-width: 90%;
+  }
+
+  .formTitle {
+    font-size: 1.5rem;
+  }
+
+  .input {
+    font-size: 0.875rem;
+    padding: 0.625rem 0.625rem 0.625rem 2.25rem;
+  }
+
+  .inputIcon {
+    font-size: 1rem;
+  }
+
+  .submitButton {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .formTitle {
+    font-size: 1.3rem;
+  }
+
+  .citizenLink {
+    font-size: 0.8rem;
+  }
+}

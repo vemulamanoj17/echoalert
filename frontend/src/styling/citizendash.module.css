@@ -1,0 +1,222 @@
+/* citizendash.module.css */
+.dashboardContainer {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0f7e9 0%, #a3e4d7 100%);
+  padding: 2rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.header h2 {
+  color: #2e7d32;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.logoutButton {
+  background: #d32f2f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.logoutButton:hover {
+  background: #b71c1c;
+  transform: scale(1.05);
+}
+
+.logoutButton:active {
+  transform: scale(0.95);
+}
+
+.sectionTitle {
+  color: #1b5e20;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #4CAF50;
+  font-size: 1.2rem;
+  margin: 2rem 0;
+}
+
+.noReports {
+  text-align: center;
+  color: #2e7d32;
+  font-size: 1.1rem;
+  margin: 2rem 0;
+}
+
+.reportsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.reportCard {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 100, 0, 0.15);
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reportCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 100, 0, 0.2);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.cardHeader h4 {
+  color: #1b5e20;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.status {
+  font-size: 0.9rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 12px;
+}
+
+.status.pending {
+  background: #ffe082;
+  color: #e65100;
+}
+
+.status.resolved {
+  background: #a5d6a7;
+  color: #2e7d32;
+}
+
+.description {
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.location {
+  color: #4CAF50;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.reportImage {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 1rem;
+  object-fit: cover;
+}
+
+.submitButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 2rem auto;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.submitButton:hover {
+  background: #2e7d32;
+  transform: scale(1.05);
+}
+
+.submitButton:active {
+  transform: scale(0.95);
+}
+
+.submitLink {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.error {
+  color: #d32f2f;
+  text-align: center;
+  margin: 1rem 0;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .dashboardContainer {
+    padding: 1rem;
+  }
+
+  .header h2 {
+    font-size: 1.5rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.3rem;
+  }
+
+  .reportCard {
+    padding: 1rem;
+  }
+
+  .cardHeader h4 {
+    font-size: 1.1rem;
+  }
+
+  .submitButton {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .logoutButton {
+    width: 100%;
+    padding: 0.6rem;
+  }
+
+  .reportsGrid {
+    grid-template-columns: 1fr;
+  }
+}
